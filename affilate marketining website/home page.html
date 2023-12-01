@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .page {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .titlebar {
+            height: 8vh;
+            background-color: palegoldenrod;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+        }
+
+        .workarea {
+            display: flex;
+        }
+
+        .sidebar {
+            height: 92vh;
+            background-color: #C2D5DF;
+            width: 18%;
+        }
+      
+        #menubtn:hover{
+         cursor: pointer;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+            padding-left: 10px;
+            display: block;
+            padding-top: 5px;
+            padding-right: 5px;
+        }
+
+        .sidebar a:hover {
+            border: 2px solid black;
+            color: white;
+            background-color: black;
+        }
+
+        .mainarea {
+            width: 100%;
+            background-color: rgb(236, 234, 234);
+            height: 92vh;
+        }
+        .earning-information{
+            background-color: darkgray;
+            width: 600px;
+            height: 340px;
+        }
+        .today-income {
+            width: 20vw;
+            height: 20vh;
+            background-color: white;
+            margin: 20px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .last-week-income {
+            width: 20vw;
+            height: 20vh;
+            background-color: white;
+            margin: 20px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .last-month-income {
+            width: 20vw;
+            height: 20vh;
+            background-color: white;
+            margin: 20px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .total-income {
+            width: 20vw;
+            height: 20vh;
+            background-color: white;
+            margin: 20px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        .toparea1{
+            height: 30%;
+            width: 100%;
+            background-color: rgb(241, 248, 37);
+            border-top-right-radius:20px ;
+            border-top-left-radius:20px ;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-size: 25px;
+        }
+        .bottomarea1{
+            height: 70%;
+            width: 100%;
+            background-image: url(img/1.jpg);
+            border-bottom-right-radius:20px ;
+            border-bottom-left-radius:20px ;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: rgb(253, 6, 6);
+            font-size: 25px;
+            
+        }
+        .toparea2{
+            height: 30%;
+            width: 100%;
+            background-color: rgb(248, 96, 37);
+            border-top-right-radius:20px ;
+            border-top-left-radius:20px ;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-size: 25px;
+        }
+        .bottomarea2{
+            height: 70%;
+            width: 100%;
+            background-image: url(img/1.jpg);
+            border-bottom-right-radius:20px ;
+            border-bottom-left-radius:20px ;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: rgb(253, 6, 6);
+            font-size: 25px;
+        }
+        .toparea3{
+            height: 30%;
+            width: 100%;
+            background-color: rgb(37, 248, 51);
+            border-top-right-radius:20px ;
+            border-top-left-radius:20px ;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-size: 25px;
+        }
+        .bottomarea3{
+            height: 70%;
+            width: 100%;
+            background-image: url(img/1.jpg);
+            border-bottom-right-radius:20px ;
+            border-bottom-left-radius:20px ;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: rgb(253, 6, 6);
+            font-size: 25px;
+        }
+        .toparea4{
+            height: 30%;
+            width: 100%;
+            background-color: rgb(37, 223, 248);
+            border-top-right-radius:20px ;
+            border-top-left-radius:20px ;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-size: 25px;
+        }
+        .bottomarea4{
+            height: 70%;
+            width: 100%;
+            background-image: url(img/1.jpg);
+            border-bottom-right-radius:20px ;
+            border-bottom-left-radius:20px ;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: rgb(253, 6, 6);
+            font-size: 25px;
+        }
+        .vanish{
+            display: none;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/c25da5f0a8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="page">
+        <div class="titlebar">
+            <i class="fa-solid fa-bars fa-2xl" id="menubtn" style="color: #000000;"></i>
+        </div>
+        <div class="workarea">
+            <div class="sidebar" id="sidebarnav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Courses</a></li>
+                    <li><a href="">Personal&nbspinformation</a></li>
+                    <li><a href="">Settings</a></li>
+                </ul>
+            </div>
+            <div class="mainarea">
+              <div class="earning-information">
+                <div class="today-income">
+                    <div class="toparea1">Today's Income</div>
+                    <div class="bottomarea1"> ₹ 2,000</div>
+                </div>
+                <div class="last-week-income">
+                    <div class="toparea2">Last 7 Days Income</div>
+                    <div class="bottomarea2"> ₹ 8,000</div>
+                </div><br>
+                <div class="last-month-income">
+                    <div class="toparea3">Last 30 Days Income</div>
+                    <div class="bottomarea3"> ₹ 30,000</div>
+                </div>
+                <div class="total-income">
+                <div class="toparea4">Total Earning</div>
+                <div class="bottomarea4"> ₹ 1,00,000</div>
+            </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      document.getElementById('menubtn').addEventListener('click',()=>{
+           document.getElementById('sidebarnav').classList.toggle('vanish');
+      });
+    </script>
+</body>
+</html>
